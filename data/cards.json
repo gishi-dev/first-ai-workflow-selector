@@ -1,0 +1,98 @@
+[
+  {
+    "id": "B01",
+    "title": "相談文の要約",
+    "frequency": "毎日40件",
+    "input": "",
+    "reviewer": "受付担当A",
+    "reference": "相談の原文",
+    "stop": "要約の下書きで停止",
+    "existing": "未確認",
+    "question": "情報管理の責任者Dに、入力してよい範囲を確かめる",
+    "target": "input"
+  },
+  {
+    "id": "B02",
+    "title": "作業メモの引き継ぎ要約",
+    "frequency": "毎日30件",
+    "input": "架空の作業メモのみ",
+    "reviewer": "",
+    "reference": "作業メモの原文",
+    "stop": "引き継ぎ下書きで停止",
+    "existing": "未確認",
+    "question": "責任者Dに、原文と照合する担当者を確かめる",
+    "target": "reviewer"
+  },
+  {
+    "id": "B03",
+    "title": "依頼文の振り分け",
+    "frequency": "毎日50件",
+    "input": "架空の依頼文のみ",
+    "reviewer": "管理担当C",
+    "reference": "担当の区分表",
+    "stop": "",
+    "existing": "担当台帳へ直接反映する想定",
+    "question": "管理担当Cに、台帳へ反映せず止める手順を確かめる",
+    "target": "stop"
+  },
+  {
+    "id": "B04",
+    "title": "固定列の月別合計",
+    "frequency": "毎週120行",
+    "input": "架空の固定列のみ",
+    "reviewer": "集計担当B",
+    "reference": "元の表と集計条件",
+    "stop": "集計結果の確認で停止",
+    "existing": "表計算の条件付き合計が使える",
+    "question": "集計担当Bに、既存の合計条件で足りるか確かめる",
+    "target": "existing"
+  },
+  {
+    "id": "B05",
+    "title": "受付完了の固定文",
+    "frequency": "毎日25件",
+    "input": "架空の受付区分のみ",
+    "reviewer": "受付担当A",
+    "reference": "承認済みの受付固定文",
+    "stop": "文面確認で停止。送信しない",
+    "existing": "メールの定型文が使える",
+    "question": "受付担当Aに、承認済みの定型文で足りるか確かめる",
+    "target": "existing"
+  },
+  {
+    "id": "B06",
+    "title": "期限表のCSV取り込みと通知",
+    "frequency": "毎日20行",
+    "input": "架空の期限行のみ",
+    "reviewer": "管理担当C",
+    "reference": "元の期限表",
+    "stop": "取り込み・通知前の照合で停止",
+    "existing": "業務ソフトの取り込み・期限通知が使える",
+    "question": "管理担当Cに、既存機能の条件を確かめる",
+    "target": "existing"
+  },
+  {
+    "id": "B07",
+    "title": "個別契約の例外条項の承認",
+    "frequency": "毎月3件",
+    "input": "架空の条項のみ",
+    "reviewer": "責任者D",
+    "reference": "契約の原文（例外の判断基準・専門判断の確認先は未整備）",
+    "stop": "承認前に責任者Dで停止",
+    "existing": "例外の判断基準と専門判断の確認先が未整備",
+    "question": "責任者Dに、例外の判断基準と専門判断の確認先を確かめる",
+    "target": "reference"
+  },
+  {
+    "id": "B08",
+    "title": "問い合わせ受付から送信まで全体",
+    "frequency": "毎日15件",
+    "input": "架空の受付文のみ。個人情報を含めない",
+    "reviewer": "受付担当A",
+    "reference": "承認済みFAQと根拠番号",
+    "stop": "下書きで停止し、人が確認。送信先へ接続しない",
+    "existing": "承認済みFAQを参照できる。受付から送信まで全体は対象にしない",
+    "question": "受付担当Aに、根拠番号と下書きを照合して止められるか確かめる",
+    "target": "stop"
+  }
+]

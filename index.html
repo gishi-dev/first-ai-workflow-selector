@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>最初にAIを試す工程を選ぶ</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body>
+<header><div class="eyebrow">サンプル業務室 / 公開デモ</div><h1>最初にAIを試す工程を選ぶ</h1><p>入力・確認・停止の条件と既存機能を照合し、人が1工程を選びます。</p></header>
+<main>
+<section class="notice"><strong>架空の業務・役割・データです。実績ではありません。</strong><p>事前に用意したAIの候補を再生しています。その場でAIを呼んでいません。入力を変えてもAIは再処理しません。頻度・件数は比較のための設定で、実測ではありません。</p><p>「欄あり」は記載の有無だけを示し、内容の妥当性・導入してよいこと・安全を示しません。導入の可否や効果・削減率・精度・費用は判断しません。登録・送信・外部接続は行いません。架空の情報だけを入力してください。</p></section>
+<div class="toolbar"><label>候補の版 <select id="version"><option value="original">元の版</option><option value="teaching">誤りの教材の版</option></select></label><button id="add">カードを追加</button><label>判断する役割 <select id="actor"><option>責任者D</option><option>受付担当A</option><option>集計担当B</option><option>管理担当C</option></select></label><button id="export">判断と試行計画をJSONで書き出す</button></div>
+<p id="version-note"></p><div id="status" role="status" aria-live="polite"></div>
+<div class="workspace"><aside><h2>01 業務カード</h2><p class="muted">各カードの元の条件を開いて確認</p><div id="cards"></div></aside><article id="detail"></article></div>
+<section id="outputs"></section>
+<section id="export-result" hidden><h2>書き出したJSON</h2><p>ダウンロードが使えない場合は、この内容をコピーして保存できます。表示は書き出した時点の記録です。変更後はもう一度書き出してください。</p><label>判断・質問・試行計画・履歴のJSON<textarea id="export-preview" readonly rows="10"></textarea></label></section>
+<section><h2>候補を持ち込む</h2><p>項目の説明と指示をコピーできます。送信はしません。任意の生成AIで作った候補や、人が編集した候補をJSONで貼り付けて取り込めます。実データは使わないでください。</p><button id="copy">説明と指示をコピー</button><details><summary>説明と指示を表示</summary><pre id="prompt"></pre></details><label>候補のJSON（配列・最大30件）<textarea id="import-data" rows="5" placeholder='[{"id":"B01","category":"保留","reason":"入力範囲が未確認","missing":["入力可否"],"stage":"入力範囲の確認","question":"入力範囲はどこまでか"}]'></textarea></label><button id="import">候補を確認して取り込む</button><p>取り込みは元の版に反映します。本文は指示として実行せず文字として扱います。取り込み後も、人の確認と理由付きの確定が必要です。</p></section>
+</main><footer>AIは候補の下書き、コードは欄の判定と制御、人は条件の確認と採用・保留を担当します。個別の法務・労務・契約の判断は行いません。</footer>
+</body></html>
